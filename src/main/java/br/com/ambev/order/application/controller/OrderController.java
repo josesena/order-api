@@ -1,4 +1,4 @@
-package br.com.ambev.order.controller;
+package br.com.ambev.order.application.controller;
 
 import br.com.ambev.order.domain.model.Order;
 import br.com.ambev.order.domain.service.OrderService;
