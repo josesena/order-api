@@ -24,11 +24,10 @@ public class OrderController {
     @GetMapping({"/{orderNumber}"})
     public ResponseEntity<Optional<Order>> getOrderByNumber(@PathVariable long orderNumber) {
         Optional response = this.orderService.findByOrderNumber(orderNumber);
-        ResponseEntity var10000;
         if (response.isPresent()) {
             return ResponseEntity.ok(response);
         } else {
-            return ResponseEntity.status((HttpStatusCode) HttpStatus.NO_CONTENT).build();
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
         }
     }
 }
